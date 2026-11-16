@@ -3346,20 +3346,20 @@ void setup() {
   BleScan::startBackgroundScanner();
   startStatusBarTask();
 
-  Serial.println("[boot] draw menu");
+  //Serial.println("[boot] draw menu");
   menu_initialized = false;
-  Serial.println("[boot] read battery");
+  //Serial.println("[boot] read battery");
   currentBatteryVoltage = readBatteryVoltage();
-  Serial.println("[boot] display menu");
+  //Serial.println("[boot] display menu");
   displayMenu();
-  Serial.println("[boot] draw status");
+  //Serial.println("[boot] draw status");
   drawStatusBar(currentBatteryVoltage, false);
 
-  Serial.println("[boot] setup touchscreen");
+  //Serial.println("[boot] setup touchscreen");
   setupTouchscreen();
 
   last_interaction_time = millis();
-  Serial.println("[boot] ready");
+  //Serial.println("[boot] ready");
   BuzzerService::beepSuccess();
   StatusLedService::setMode(StatusLedService::Mode::Idle);
   StatusLedService::event(StatusLedService::Event::BootOk);

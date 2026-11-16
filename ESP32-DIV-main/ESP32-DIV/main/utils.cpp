@@ -1150,16 +1150,6 @@ void displayLogo(uint16_t color, int displayTime) {
   // Version is intentionally NOT obfuscated.
   tft.print(ESP32DIV_VERSION);
 
-  Serial.println("==================================");
-  serialPrintObf(OBF_PN, sizeof(OBF_PN), true);
-  Serial.print("Developed by: "); serialPrintObf(OBF_DN, sizeof(OBF_DN), true);
-  // Version is intentionally NOT obfuscated.
-  Serial.print("Version:      "); Serial.println(ESP32DIV_VERSION);
-  Serial.print("Contact:      "); serialPrintObf(OBF_EM, sizeof(OBF_EM), true);
-  Serial.print("GitHub:       "); serialPrintObf(OBF_GH, sizeof(OBF_GH), true);
-  Serial.print("Website:      "); serialPrintObf(OBF_WB, sizeof(OBF_WB), true);
-  Serial.println("==================================");
-
   delay(displayTime);
 }
 
